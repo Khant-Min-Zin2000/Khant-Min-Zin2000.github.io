@@ -1,0 +1,201 @@
+/* Colours and basic sizes. Change these to adjust the whole site. */
+:root {
+  --navy: #1b2b45;
+  --navy-dark: #12203a;
+  --navy-soft: #e8edf4;
+  --text: #1f2933;
+  --muted: #5b6672;
+  --line: #dde2e8;
+  --bg: #ffffff;
+  --bg-alt: #f5f7f9;
+  --radius: 8px;
+  --max: 1040px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-dark); }
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--navy);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px 24px;
+  min-height: 60px; padding-top: 10px; padding-bottom: 10px;
+}
+.brand {
+  color: #fff; text-decoration: none; font-weight: 700; letter-spacing: 0.02em;
+}
+.brand:hover { color: #fff; }
+.site-nav { display: flex; gap: 22px; }
+.site-nav a {
+  color: #d6deea; text-decoration: none; font-size: 15px;
+}
+.site-nav a:hover { color: #fff; text-decoration: underline; }
+
+/* Home */
+.hero {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+  padding: 72px 0 64px;
+}
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+}
+.hero h1 { font-size: clamp(36px, 6vw, 52px); margin: 0 0 12px; }
+.headline { font-size: 20px; color: var(--navy); margin: 0 0 18px; max-width: 40em; }
+.intro { max-width: 42em; color: var(--text); margin: 0 0 28px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  font-size: 15px; font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--navy);
+  transition: background 0.15s, color 0.15s;
+}
+.btn-primary { background: var(--navy); color: #fff; }
+.btn-primary:hover { background: var(--navy-dark); color: #fff; }
+.btn-secondary { background: #fff; color: var(--navy); }
+.btn-secondary:hover { background: var(--navy-soft); }
+.btn-small { padding: 7px 14px; font-size: 14px; }
+
+/* Sections */
+.section { padding: 64px 0; }
+.section-alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section h2 { font-size: 30px; margin: 0 0 8px; }
+.section-lead { color: var(--muted); margin: 0 0 28px; }
+
+/* Search and filters */
+.tools { margin-bottom: 16px; }
+#search {
+  width: 100%; max-width: 460px;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: #fff; color: var(--text);
+}
+#search:focus { outline: 2px solid var(--navy); outline-offset: 1px; border-color: var(--navy); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.filter-btn {
+  font: inherit; font-size: 14px;
+  padding: 6px 12px;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: #fff; color: var(--text); cursor: pointer;
+}
+.filter-btn:hover { border-color: var(--navy); }
+.filter-btn[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+.result-count { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
+
+/* Report cards */
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.report-card {
+  display: flex; flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.report-meta {
+  display: flex; flex-wrap: wrap; gap: 4px 12px;
+  font-size: 13px; color: var(--muted); margin-bottom: 8px;
+}
+.report-role { font-weight: 600; color: var(--navy); }
+.report-card h3 { font-size: 19px; margin: 0 0 10px; }
+.report-card p { font-size: 15px; margin: 0 0 14px; color: var(--text); }
+.tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 16px; padding: 0; list-style: none; }
+.tag-list li {
+  font-size: 12px; padding: 2px 8px; border-radius: 4px;
+  background: var(--navy-soft); color: var(--navy);
+}
+.report-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.empty { color: var(--muted); }
+
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  margin-top: 20px;
+}
+.about-grid p { margin-top: 0; }
+.note { font-size: 15px; color: var(--muted); }
+.facts { display: grid; gap: 16px; }
+.fact {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.fact h3 { font-size: 17px; margin: 0 0 6px; }
+.fact p { margin: 0 0 6px; font-size: 15px; }
+.fact ul { margin: 0; padding-left: 18px; font-size: 15px; }
+.skills-title { font-size: 20px; margin: 36px 0 12px; }
+.skills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.skills li {
+  background: #fff; border: 1px solid var(--line); border-radius: 999px;
+  padding: 6px 14px; font-size: 15px;
+}
+
+/* Contact */
+.contact-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.contact-list li { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; }
+.contact-label {
+  min-width: 90px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+}
+.contact-list a { font-size: 18px; word-break: break-word; }
+
+/* Footer */
+.site-footer { background: var(--navy); color: #c3cddb; padding: 24px 0; font-size: 14px; }
+.site-footer p { margin: 0; }
+
+/* Phones */
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  .hero { padding: 48px 0 44px; }
+  .section { padding: 48px 0; }
+  .about-grid { grid-template-columns: 1fr; }
+  .report-list { grid-template-columns: 1fr; }
+  .site-nav { gap: 18px; }
+}

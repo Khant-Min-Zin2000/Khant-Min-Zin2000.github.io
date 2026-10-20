@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khant Min Zin | Research Portfolio</title>
+  <meta name="description" content="Market and economic research reports by Khant Min Zin, final-year finance student at Massey University, Auckland.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Khant Min Zin</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#research">Research</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="container">
+        <p class="eyebrow">Finance student · Auckland, New Zealand</p>
+        <h1>Khant Min Zin</h1>
+        <p class="headline">Final-year finance student working towards a career in financial research.</p>
+        <p class="intro">
+          I'm studying a Bachelor of Business (Finance) at Massey University and I'm the Treasurer and a Research Analyst
+          at the Massey University Investment Club. This site collects the market and economic research I've written
+          and edited for the club, covering global markets, New Zealand's economy, credit and equities.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#research">Read my research</a>
+          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="section">
+      <div class="container">
+        <h2>Research reports</h2>
+        <p class="section-lead">
+          Written and edited for the Massey University Investment Club (MUIC). Newest first.
+        </p>
+
+        <div class="tools">
+          <label class="visually-hidden" for="search">Search reports</label>
+          <input id="search" type="search" placeholder="Search reports, e.g. RBNZ, oil, AI" autocomplete="off">
+          <div id="filters" class="filters" role="group" aria-label="Filter by topic"></div>
+        </div>
+
+        <p id="result-count" class="result-count" aria-live="polite"></p>
+        <div id="report-list" class="report-list"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2>About</h2>
+        <div class="about-grid">
+          <div>
+            <p>
+              I'm in my final year of a finance degree at Massey University in Auckland, finishing in November 2026.
+              I want to work as a financial research analyst, and most of what I do outside class points that way:
+              writing market reports for the investment club, building valuation models in case competitions, and
+              following how global events feed through to New Zealand.
+            </p>
+            <p>
+              In 2026 I was the finance lead for my team in the PropConnex Property Case Competition (ANZ Final) and the
+              Property Foundation NZ Property Case Challenge, where I built the DCF, IRR and sensitivity models behind
+              our recommendations.
+            </p>
+            <p class="note">Eligible for a Post-Study Work Visa after graduating. No visa sponsorship needed.</p>
+          </div>
+
+          <div class="facts">
+            <div class="fact">
+              <h3>Education</h3>
+              <p><strong>Bachelor of Business (Finance)</strong><br>Massey University, Auckland · finishing Nov 2026</p>
+              <ul>
+                <li>CGPA 7.82 / 9.00</li>
+                <li>Massey Business School Dean's List (2025)</li>
+                <li>INFINZ Conference Scholar (2026)</li>
+              </ul>
+            </div>
+            <div class="fact">
+              <h3>Massey University Investment Club</h3>
+              <p><strong>Treasurer &amp; Research Analyst</strong> · Nov 2025 to present</p>
+              <ul>
+                <li>Write and edit the club's market research reports</li>
+                <li>Manage the club budget and grant applications</li>
+                <li>Organised a 35-person visit to NZX Auckland</li>
+              </ul>
+            </div>
+            <div class="fact">
+              <h3>Certification</h3>
+              <p>Bloomberg Market Concepts (BMC)</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="skills-title">Skills</h3>
+        <ul class="skills">
+          <li>Financial modelling</li>
+          <li>DCF and IRR valuation</li>
+          <li>Sensitivity analysis</li>
+          <li>Capital structure analysis</li>
+          <li>Advanced Excel</li>
+          <li>Bloomberg</li>
+          <li>Power BI</li>
+          <li>Market research and report writing</li>
+          <li>Presenting to panels</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="section-lead">I'm looking for graduate roles in financial research. Happy to talk.</p>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:khantminzin55@gmail.com">khantminzin55@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/khantminzin611" target="_blank" rel="noopener">linkedin.com/in/khantminzin611</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Khant Min Zin. Reports were written for the Massey University Investment Club for educational purposes and are not financial advice.</p>
+    </div>
+  </footer>
+
+  <script src="reports.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
