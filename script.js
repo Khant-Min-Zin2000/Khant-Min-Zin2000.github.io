@@ -34,6 +34,22 @@
 
   search.addEventListener("input", render);
 
+  // Name used for GoatCounter click events. If several reports share a title
+  // (e.g. "Weekly Market Report"), the date is added so each one counts separately.
+  function eventName(r) {
+    const shared = reports.filter(x => x.title === r.title).length > 1;
+    return shared ? r.title + " (" + (r.displayDate || r.date) + ")" : r.title;
+  }
+
+  // Records a click in GoatCounter. Does nothing if the counter hasn't loaded
+  // (e.g. blocked by an ad blocker, or when you open the site from your computer).
+  function trackClick(r) {
+    if (window.goatcounter && window.goatcounter.count) {
+      const name = eventName(r);
+      window.goatcounter.count({ path: name, title: name, event: true });
+    }
+  }
+
   function el(tag, className, text) {
     const node = document.createElement(tag);
     if (className) node.className = className;
@@ -71,6 +87,9 @@
     download.href = href;
     download.setAttribute("download", r.file);
     download.setAttribute("aria-label", "Download PDF: " + r.title + ", " + (r.displayDate || r.date));
+
+    open.addEventListener("click", () => trackClick(r));
+    download.addEventListener("click", () => trackClick(r));
 
     actions.appendChild(open);
     actions.appendChild(download);
